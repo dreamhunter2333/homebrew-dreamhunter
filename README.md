@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install jinmu333/awsl/<formula>`
+`brew install jinmu333/dreamhunter/<formula>`
 
-Or `brew tap jinmu333/awsl` and then `brew install <formula>`.
+Or `brew tap jinmu333/dreamhunter` and then `brew install <formula>`.
 
 ## Documentation
 
