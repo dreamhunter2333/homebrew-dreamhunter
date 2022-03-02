@@ -4,9 +4,17 @@
 class Sshctx < Formula
   desc "Sshctx"
   homepage "https://github.com/jinmu333/sshctx"
-  url "https://github.com/jinmu333/sshctx/releases/download/v1.2.1/sshctx_v1.2.1_darwin_x86_64.tar.gz"
-  sha256 "f82a8bef1d368e0c978f34fe1bc17450d99f7713e45d9563e546c8855e7273b5"
+
+  version "1.2.2"
   license ""
+
+  if Hardware::CPU.intel?
+    url "https://github.com/jinmu333/sshctx/releases/download/v#{version}/sshctx_v#{version}_darwin_x86_64.tar.gz"
+    sha256 "c363a434bfdbdee813aab7cfa4e1a7633c0a297f2fda143d85613b3f0339c9e8"
+  else
+    url "https://github.com/jinmu333/sshctx/releases/download/v#{version}/sshctx_v#{version}_darwin_arm64.tar.gz"
+    sha256 "7c5b1ca7b14e2354c942f2667d394e15ec96da32e4f9b758336940e510dc3d09"
+  end
 
   def install
     bin.install "sshctx"
